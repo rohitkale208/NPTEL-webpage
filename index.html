@@ -7,168 +7,193 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NPTEL-Workshop</title>
   <link href="https://fonts.googleapis.com/css?family=Inter:400,800,900&display=swap" rel="stylesheet">
-  
+
   <style>
-    *{margin: 0;
-     padding: 0;
+    * {
+      margin: 0;
+      padding: 0;
     }
 
-  html{
-    scroll-behavior: smooth;
-  }
-  .container{
-    display:grid;
-    height:100vh;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0.3fr 0.1fr 2fr 0.4fr; 
-    grid-template-areas:
-      "head head head head"
-      "main main main main"
-      "sidebar content content content"
-      "sidebar footer footer footer";
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .container {
+      display: grid;
+      height: 100vh;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 0.3fr 0.1fr 2fr 0.4fr;
+      grid-template-areas:
+        "head head head head"
+        "main main main main"
+        "sidebar content content content"
+        "sidebar footer footer footer";
       grid-gap: 0.2rem;
 
-  }
-  
-  header{
-    background-color: rgb(163, 238, 238);
-    grid-area: head;
-    text-align: center;
-    color: blue;
-    font-size: xx-large; 
-    font-weight: 300; 
-  }
+    }
 
-  main{
-    background-color: aquamarine;
-    grid-area: main;
-  }
+    header {
+      background-color: rgb(163, 238, 238);
+      grid-area: head;
+      text-align: center;
+      color: blue;
+      font-size: xx-large;
+      font-weight: 300;
+    }
 
-  .content{
-    margin: 10px;
-    padding: 10px;
-    background-color: beige;
-    grid-area: content;
-  } 
+    main {
+      background-color: aquamarine;
+      grid-area: main;
+    }
 
-  #sidebar{
-    padding: 10px;
-    padding: 25px 0px 0px 10px;
-    background-color: rgb(243, 202, 234);
-    grid-area: sidebar;
-    font-size: medium;
-    
-  }
- 
-  footer{
-    background-color: coral;
-    grid-area: footer;
-  }
- 
-  a{
-    text-decoration: none;
-  }
+    .content {
+      margin: 10px;
+      padding: 10px;
+      height: 100vh;
+      background-color: beige;
+      grid-area: content;
+    }
 
-  li{
-  list-style: none;
-  }
-  
-  .main-nav{
-    width: auto;
-    background-color: rgb(238, 211, 211);
-    padding: 22px 10px 22px 27px;
-    line-height: 30pt;
-    font-size: larger;
-    border-bottom: 10px solid rgb(155, 15, 15);
-  }
+    #sidebar {
+      padding: 10px;
+      padding: 25px 0px 0px 10px;
+      background-color: rgb(243, 202, 234);
+      grid-area: sidebar;
+      font-size: medium;
 
-  main-nav a{
-    display: block;
-  }
+    }
 
-  .main-nav a:hover{background-color: rgb(245, 231, 231);}
+    footer {
+      background-color: coral;
+      grid-area: footer;
+    }
 
-  .main-nav-ul ul {display: none;}
-  .main-nav-ul li:hover ul { display: block;}
-  #prog ul {display: none;}
-  #prog li:hover ul{display: block;}
-  .main-nav .sub-arrow:after{
-    content: '\203A';
-    float: right;
-    margin-right: 20px;
-    transform: rotate(90deg);
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-  }
+    a {
+      text-decoration: none;
+    }
 
-  .main-nav li:hover .sub-arrow:after {
-	content: '\2039';
-  }
+    li {
+      list-style: none;
+    }
 
-  @media only screen and (max-width: 550px){
-     .container{
-       grid-template-columns: 1fr;
-       grid-template-rows: 0.4fr 0.4fr 1fr 2.2fr 1fr;
-       grid-template-areas: 
-        "head"
-        "main"
-        "sidebar"
-        "content"
-        "footer";
-     }
-  }
- 
- section{
-   display:flex
-   align-items:center;
-   justify-content: center;
- }
+    .main-nav {
+      width: auto;
+      background-color: rgb(238, 211, 211);
+      padding: 22px 10px 22px 27px;
+      line-height: 30pt;
+      font-size: larger;
+      border-bottom: 10px solid rgb(155, 15, 15);
+    }
 
-#overview{
-  background-color: whitesmoke;
-}
-#handouts{
-  background-color: whitesmoke;
-}
-#tools{
-  background-color: whitesmoke;
-}
-#keil{
-  background-color: whitesmoke;
-}
-#flip{
-  background-color: whitesmoke;
-}
-#resources{
-  background-color: whitesmoke;
-}
+    main-nav a {
+      display: block;
+    }
 
-#notes{
-  background-color: whitesmoke;
-}
-#faq{
-  background-color: whitesmoke;
-}
-#ke{
-  background-color: whitesmoke;
-}
+    .main-nav a:hover {
+      background-color: rgb(245, 231, 231);
+    }
 
-.bottom-onehalf {
-     margin-bottom: 1.5cm;
-}
-.bottom-one {
-     margin-bottom: 1cm;
-}
-.bottom-two {
-     margin-bottom: 2cm;
-}
+    .main-nav-ul ul {
+      display: none;
+    }
+
+    .main-nav-ul li:hover ul {
+      display: block;
+    }
+
+    #prog ul {
+      display: none;
+    }
+
+    #prog li:hover ul {
+      display: block;
+    }
+
+    .main-nav .sub-arrow:after {
+      content: '\203A';
+      float: right;
+      margin-right: 20px;
+      transform: rotate(90deg);
+      -webkit-transform: rotate(90deg);
+      -moz-transform: rotate(90deg);
+    }
+
+    .main-nav li:hover .sub-arrow:after {
+      content: '\2039';
+    }
+
+    @media only screen and (max-width: 550px) {
+      .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.4fr 0.4fr 1fr 2.2fr 1fr;
+        grid-template-areas:
+          "head"
+          "main"
+          "sidebar"
+          "content"
+          "footer";
+      }
+    }
+
+    section {
+      display: flex align-items:center;
+      justify-content: center;
+    }
+
+    #overview {
+      background-color: whitesmoke;
+    }
+
+    #handouts {
+      background-color: whitesmoke;
+    }
+
+    #tools {
+      background-color: whitesmoke;
+    }
+
+    #keil {
+      background-color: whitesmoke;
+    }
+
+    #flip {
+      background-color: whitesmoke;
+    }
+
+    #resources {
+      background-color: whitesmoke;
+    }
+
+    #notes {
+      background-color: whitesmoke;
+    }
+
+    #faq {
+      background-color: whitesmoke;
+    }
+
+    #ke {
+      background-color: whitesmoke;
+    }
+
+    .bottom-onehalf {
+      margin-bottom: 1.5cm;
+    }
+
+    .bottom-one {
+      margin-bottom: 1cm;
+    }
+
+    .bottom-two {
+      margin-bottom: 2cm;
+    }
   </style>
 </head>
 
 <body>
   <div class="container">
     <header>Welcome to NPTEL course on Microprocesors</header>
-    
+
     <main>
       main
     </main>
@@ -184,43 +209,47 @@
               <li><a href="#">Instructors</a></li>
             </ul>
           </li>
-          <li><a href="#handouts">Lab handouts <span class="sub-arrows"></span ></a>
+          <li><a href="#handouts">Lab handouts <span class="sub-arrows"></span></a>
             <ul>
               <li><a href="#">lab1</a></li>
               <li><a href="#">lab2</a></li>
             </ul>
           </li>
-          <li><a href="#tools">Development tools <span class="sub-arrows"></span></a>
+          <li><a href="tools.html">Development tools<span class="sub-arrows"></span></a>
             <ul>
-              <li><a href="#keil">Keil-uVision IDE</a></li>
-              <li><a href="#flip">Flip</a></li>
+              <li><a href="keil.html">Keil-uVision IDE</a></li>
+              <li><a href="flip.html">Flip</a></li>
             </ul>
           </li>
           <li><a href="#resources">PT-51 board resourses <span class="sub-arrows"></span></a>
             <ul id="prog">
-              <li><a href="pt_51.html">User manual</a></li>
+              <li><a href="manual.html">User manual</a></li>
               <li><a href="#">Programming & testing <span class="sub-arrows"></span></a>
                 <ul>
-                    <li><a href="#">test</a></li>
+                  <li><a href="hex.html">Running a HEX file on PT-51</a></li>
+                  <li><a href="testing.html">Testing of pheripherals on PT-51</a></li>
                 </ul>
               </li>
-              <li><a href="#">8051 data sheet</a></li>
-              <li><a href="#">8051 instructions set</a></li>
+              <li><a href="datasheet.html">AT89C5131A datasheet</a></li>
+              <li><a href="intrsuctions.html">8051 instructions set</a></li>
             </ul>
           </li>
           <li><a href="#notes">Lecture notes <span class="sub-arrows"></span></a>
             <ul>
-              <li><a href="#">lect1</a></li>
-            <li><a href="#">lect2</a></li>
+              <li><a href="intotomico.html">Introduction to Microcontrollers</a></li>
+              <li><a href="interrupts.html">8051 Interrupts</a></li>
+              <li><a href="timers.html">8051 Timers</a></li>
+              <li><a href="serialIO.html">8051 Serial IO</a></li>
+              <li><a href="intelHex.html">Intel HEX Format</a></li>
             </ul>
           </li>
           <li><a href="#faq">FAQ</a></li>
         </ul>
-      </nav> 
-      </ul>      
+      </nav>
+      </ul>
     </div>
 
-    
+
 
     <div class="content">
       <section id="overview">
@@ -230,68 +259,25 @@
         <h2>handouts</h2>
       </section>
       <section id="tools" class="bottom-one">
-        <h2>Development Tools:</h2>
-      </section>
-      <section id="keil"class="bottom-one">
-        <h3 class="bottom-one">Keil-uVision</h3>
-        <p class="bottom-one">
-          Keil µVision is an integrated development environment (IDE) for editing, compiling, running, and debugging programs for the 8051 microcontroller. It is <em>integrated</em> in the sense that the same environment is used to perform all these tasks. For loading programs into the 8051 microcontroller, we will need the <a class="reference internal" href="#flip"><span class="std std-ref">FLIP</span></a> tool.</p>
-        </p>
-        <p class="bottom-one">
-          An <em>non-integrated</em> workflow would be where different tools are used for different tasks. For example, Visual Studio Code could be used for editing the program and a command line compiler could be used to compile the program.</p>
-          <p class="bottom-one">At a high-level description, the Keil IDE workflow is as follows:</p>
-
-          <blockquote class="bottom-one">
-            <div><ol class="arabic simple">
-            <li><p>1.Create a new project.</p></li>
-            <li><p>2.Specify the target device while creating the project.</p></li>
-            <li><p>3.Create a new source file in the project.</p></li>
-            <li><p>4.Build the project.</p></li>
-            <li><p>5.Fix any compilation errors and rebuild.</p></li>
-            <li><p>6.Once program compiles without errors, use the debugger to check correctness of execution.</p></li>
-            </ol>
-            </div>
-          </blockquote>
-        </p>
-           <p class="bottom-two">See the slide deck and video in the following section for more detailed instructions.</p>
-
-        <h3 class="bottom-one">Download and Installtion</h3>
-
-        <p class="bottom-one">To <strong>download the Keil IDE</strong>, you will need to register at <a class="reference external" href="https://www.keil.com/demo/eval/c51.htm">https://www.keil.com/demo/eval/c51.htm</a></p>
-
-        <p class="bottom-one"><strong>Linux users</strong> will need to install Keil using <a class="reference external" href="https://www.winehq.org/">Wine</a>.</p>
-
-        <ul class="bottom-two">
-          <li><p>On Ubuntu, install Wine by running the following command. Use the relevant package manager for other Linux distributions.</p>
-          <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt install wine-stable
-          </pre></div>
-          </div>
-          </li>
-          <li><p>Run the following command in the folder where c51v960a.exe was downloaded.</p>
-          <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wine c51v960a.exe
-          </pre></div>
-          </div>
-          </li>
-        </ul>
-
-        <h3 class="bottom-two"></h3>
-      </section>
-      <section id="flip" class="bottom-one">
-        <h3 class="bottom-one">Flip</h3>
-
-      </section>
-      <section id="resources">
 
 
-      </section>
-      <section id="notes">
-        <h2>notes</h2>
-      </section>
-      <section id="faq">
-        <h2>faq</h2>
-      </section>
-    </div>
-    <footer>Footer</footer>
+       </section>
+    <section id="flip" class="bottom-one">
+      <h3 class="bottom-one">Flip</h3>
+
+    </section>
+    <section id="resources">
+
+
+    </section>
+    <section id="notes">
+      <h2>notes</h2>
+    </section>
+    <section id="faq">
+      <h2>faq</h2>
+    </section>
+  </div>
+  <footer>Footer</footer>
   </div>
 </body>
 
